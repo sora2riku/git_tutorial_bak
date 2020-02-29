@@ -1,4 +1,61 @@
 ==================
+GitHubに送信する
+==================
+#リモートリポジトリ(GitHub)を新規追加する。
+git remote add origin https://github.com/sora2riku/repo.git
+
+originというショートかっとでurlのリモートリポジトリを登録する
+
+githubにて新しくリポジトリを作成する
+リポジトリ名入力する
+Description(説明):入力しなくてOK
+モードはPublib(公共の）を選ぶ
+※privateは有料
+initialize this repository with a README(READMEを使用してこのリポジトリを初期化すると、リポジトリを
+すぐにコンピューターに複製できます。)チェックしない
+create repositoryボタンを押す（リポジトリを作成する）
+
+
+#1行目のコマンドをコピーする
+またはコマンドラインから既存のリポジトリをプッシュする
+git remote add origin https://github.com/sora2riku/git_tutorial.git
+
+#git hubにプッシュする
+git push -u origin master
+
+-uをつけておくと次回以降git pushだけでプッシュできる
+※初回だけつければいい
+
+
+user:sora2riku
+pass:surf_1981
+
+
+#origin削除方法
+git remote -v
+git remote rm origin
+
+git push <リモート名> <ブランチ名>
+git push origin master
+
+
+
+
+
+
+==================
+ファイルの移動を記録する
+==================
+
+git mv <旧ファイル> <新ファイル>
+
+#以下のコマンドと同じ
+mv <旧ファイル> <新ファイル>
+git rm <旧ファイル>
+git add <新ファイル>
+
+
+==================
 ファイルの削減を記録する
 ==================
 #ファイルごと削除
@@ -7,6 +64,10 @@ git rm -t <ディレクトリ名>
 
 #ローカルのツリーにはファイルを残したいとき
 git rm --cached <ファイル名>
+
+#削除を元に戻す
+git reset HEAD index.html
+git checkout index.html
 
 ==================
 変更履歴を確認する
