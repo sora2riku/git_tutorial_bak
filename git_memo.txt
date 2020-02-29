@@ -1,10 +1,37 @@
 ==================
+変更を記録する（コミット）
+==================
+ステージの内容をリポジトリにスナップショットを記録する。
+ツリーファイルとコミットファイルが作られる
+git commit
+git commit -m "<メッセージ>"
+git commit -v
+
+
+git commitを実行するとGitEditerが起動する
+メッセージを入力する
+
+
+
+
+メッセージ例（個人開発時）
+1行目：変更の内容と要点を偉業で簡潔に書く
+
+メッセージ例（チーム開発時）
+1行目：変更の要約
+2行目：空行
+3行目：変更した理由
+
+
+==================
 変更をステージに追加する
 ==================
 ワークツリーからステージに変更を加える
+圧縮ファイルが作られる。
+インデックスに追加される
 git add ファイル名
 git add フォルダ名
-git add.
+git add　.
 
 
 ==================
@@ -96,8 +123,8 @@ githubに登録したのちにローカル環境設定
 
 gitbash使う
 
-git config --global user.name "githubのユーザー名"
-git config --global user.email githubに登録した@メールアドレス
+git config --global user.name "sora2riku"
+git config --global user.email classic_surf_radars@ybb.ne.jp
 git config --global core.editor "atom --wait"  #使用するエディター登録　入力例はAtom
 
 設定確認（個別）
