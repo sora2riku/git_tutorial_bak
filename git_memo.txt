@@ -1,6 +1,27 @@
 ==================
+コマンドにエイリアスを付ける
+==================
+git config --global alias.ci commit
+git config --global alias.st status
+git config --global alias.br branch
+git config --global alias.co checkout
+
+git config 設定変更コマンド
+--global　PC全体の設定変更
+--globalを付けない場合は、現在使用している.gitフォルダのみに反映される
+
+
+
+
+
+==================
 GitHubに送信する
 ==================
+コマンド例）
+git push <リモート名> <ブランチ名>
+git push origin master
+
+
 #リモートリポジトリ(GitHub)を新規追加する。
 git remote add origin https://github.com/sora2riku/repo.git
 
@@ -35,8 +56,7 @@ pass:surf_1981
 git remote -v
 git remote rm origin
 
-git push <リモート名> <ブランチ名>
-git push origin master
+
 
 
 
