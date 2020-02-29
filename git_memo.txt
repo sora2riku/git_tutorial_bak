@@ -1,4 +1,37 @@
 ==================
+変更差分を確認する
+==================
+#git addする前の変更分
+git diff
+git diff <ファイル名>
+
+#git addした後の変更分
+git diff --staged
+
+git diff
++がついているところが変更箇所
+
+qをおして抜ける
+
+==================
+現在の変更状況を確認する。
+==================
+
+git status
+下記の情報が表される
+ワークツリーとステージの間で変更されたファイル
+ステージとリポジトリの間で変更されたファイル
+
+変更されたファイルをステージに追加する
+git add index.html
+
+コミットする
+git commit
+
+git statusで変更状況を確認する
+
+
+==================
 変更を記録する（コミット）
 ==================
 ステージの内容をリポジトリにスナップショットを記録する。
@@ -11,8 +44,13 @@ git commit -v
 git commitを実行するとGitEditerが起動する
 メッセージを入力する
 
+保存して終了
+:write out
+:exit
 
-
+保存しないで終了
+:qa!
+:exit
 
 メッセージ例（個人開発時）
 1行目：変更の内容と要点を偉業で簡潔に書く
@@ -21,6 +59,17 @@ git commitを実行するとGitEditerが起動する
 1行目：変更の要約
 2行目：空行
 3行目：変更した理由
+
+
+コミットした結果表示
+$ git config --global user.name "sora2riku"            
+1 [sig] bash 16376! sigpacket::process: Suppressing signal 18 to win32 process (pid 16128)
+159253519 [sig] bash 16376! sigpacket::process: Suppressing signal 18 to win32 process (pid 16128)
+[master (root-commit) 5f7a222] initial commit
+ 3 files changed, 120 insertions(+)
+ create mode 160000 atom/atom
+ create mode 100644 git_memo.txt
+ create mode 100644 index.html
 
 
 ==================
